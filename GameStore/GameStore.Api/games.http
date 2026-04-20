@@ -15,3 +15,15 @@ Content-Type: application/json
     "price": 59.99,
     "releaseDate": "2017-03-03"
 }
+
+
+###
+PUT http://localhost:5022/games/4
+Content-Type: application/json
+
+{
+    "name": "The Legend of Zelda: Breath of the Wild",
+    "genre": "Action-adventure",
+    "price": 49.99,
+    "releaseDate": "2017-03-03"
+}   
