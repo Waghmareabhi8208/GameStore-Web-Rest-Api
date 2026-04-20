@@ -32,8 +32,13 @@ List<GameDto> games = [
 app.MapGet("/games", () => games);
 
 // GET /games/{id}
-app.MapGet("/games/{id}", (int id) => games.Find(game => game.Id == id))
-    .WithName(GetGameEndpointName);
+app.MapGet("/games/{id}", (int id) =>
+{
+   var game =  games.Find(game => game.Id == id);
+
+   return game is not null ? Results.Ok(game) : Results.NotFound();
+})
+.WithName(GetGameEndpointName);
 
 
 // POST /games
@@ -62,6 +67,15 @@ app.MapPut("/games/{id}",(int id, UpdateGameDto updateGame) =>
         updateGame.ReleaseDate
     );
 
+    return Results.NoContent();
+});
+
+// Delete /games/{id}
+// Unfortunately delete does not require a dto bcz it only requires the id and does not require any body content.
+app.MapDelete("/games/{id}", (int id) =>
+{
+    var index = games.FindIndex(game => game.Id == id);
+    games.RemoveAt(index);
     return Results.NoContent();
 });
 
