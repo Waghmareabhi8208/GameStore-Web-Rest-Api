@@ -9,6 +9,7 @@
   <ItemGroup>
     <Folder Include="Dtos\" />
     <Folder Include="EndPoints\" />
+    <Folder Include="Models\" />
   </ItemGroup>
 
   <ItemGroup>
