@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "vHaK8abqUug=",
+  "dgSpecHash": "UbrBPdoO9Po=",
   "success": true,
-  "projectFilePath": "D:\\ConsulencyPractise\\GameStore-Web-Rest-Api\\GameStore\\GameStore.Api\\GameStore.Api.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "D:\\ConsulencyPractise\\GameStore-Web-Rest-Api\\GameStore\\GameStore.api\\GameStore.Api.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\waghm\\.nuget\\packages\\fluentvalidation\\11.11.0\\fluentvalidation.11.11.0.nupkg.sha512",
+    "C:\\Users\\waghm\\.nuget\\packages\\fluentvalidation.aspnetcore\\11.3.1\\fluentvalidation.aspnetcore.11.3.1.nupkg.sha512",
+    "C:\\Users\\waghm\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.11.0\\fluentvalidation.dependencyinjectionextensions.11.11.0.nupkg.sha512",
+    "C:\\Users\\waghm\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\2.1.0\\microsoft.extensions.dependencyinjection.abstractions.2.1.0.nupkg.sha512"
+  ],
   "logs": []
 }

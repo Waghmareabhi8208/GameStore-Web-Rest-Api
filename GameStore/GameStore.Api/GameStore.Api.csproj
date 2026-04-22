@@ -11,4 +11,8 @@
     <Folder Include="EndPoints\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="FluentValidation.AspNetCore" Version="11.3.1" />
+  </ItemGroup>
+
 </Project>

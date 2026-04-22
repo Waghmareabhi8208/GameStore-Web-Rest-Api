@@ -10,9 +10,9 @@ POST http://localhost:5022/games
 Content-Type: application/json
 
 {
-    "name": "The Legend of Zelda: Breath of the Wild",
+    "name": "The Legend",
     "genre": "Action-adventure",
-    "price": 59.99,
+    "price": 58.55,
     "releaseDate": "2017-03-03"
 }
 
@@ -24,7 +24,7 @@ Content-Type: application/json
 {
     "name": "The Legend of Zelda: Breath of the Wild",
     "genre": "Action-adventure",
-    "price": 49.99,
+    "price": 490.99,
     "releaseDate": "2017-03-03"
 }   
 

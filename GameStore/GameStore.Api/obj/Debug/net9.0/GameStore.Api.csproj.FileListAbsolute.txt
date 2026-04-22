@@ -22,3 +22,9 @@ D:\ConsulencyPractise\GameStore-Web-Rest-Api\GameStore\GameStore.Api\obj\Debug\n
 D:\ConsulencyPractise\GameStore-Web-Rest-Api\GameStore\GameStore.Api\obj\Debug\net9.0\GameStore.Api.genruntimeconfig.cache
 D:\ConsulencyPractise\GameStore-Web-Rest-Api\GameStore\GameStore.Api\obj\Debug\net9.0\ref\GameStore.Api.dll
 D:\ConsulencyPractise\GameStore-Web-Rest-Api\GameStore\GameStore.Api\obj\Debug\net9.0\GameStore.Api.sourcelink.json
+D:\ConsulencyPractise\GameStore-Web-Rest-Api\GameStore\GameStore.Api\bin\Debug\net9.0\FluentValidation.dll
+D:\ConsulencyPractise\GameStore-Web-Rest-Api\GameStore\GameStore.Api\bin\Debug\net9.0\FluentValidation.AspNetCore.dll
+D:\ConsulencyPractise\GameStore-Web-Rest-Api\GameStore\GameStore.Api\bin\Debug\net9.0\FluentValidation.DependencyInjectionExtensions.dll
+D:\ConsulencyPractise\GameStore-Web-Rest-Api\GameStore\GameStore.Api\obj\Debug\net9.0\GameStore.Api.csproj.AssemblyReference.cache
+D:\ConsulencyPractise\GameStore-Web-Rest-Api\GameStore\GameStore.Api\obj\Debug\net9.0\GameStore.Api.MvcApplicationPartsAssemblyInfo.cs
+D:\ConsulencyPractise\GameStore-Web-Rest-Api\GameStore\GameStore.Api\obj\Debug\net9.0\GameStor.5118A84D.Up2Date

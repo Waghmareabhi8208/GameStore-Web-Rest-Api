@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\ConsulencyPractise\\GameStore-Web-Rest-Api\\GameStore\\GameStore.Api\\GameStore.Api.csproj": {}
+    "D:\\ConsulencyPractise\\GameStore-Web-Rest-Api\\GameStore\\GameStore.api\\GameStore.Api.csproj": {}
   },
   "projects": {
-    "D:\\ConsulencyPractise\\GameStore-Web-Rest-Api\\GameStore\\GameStore.Api\\GameStore.Api.csproj": {
+    "D:\\ConsulencyPractise\\GameStore-Web-Rest-Api\\GameStore\\GameStore.api\\GameStore.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ConsulencyPractise\\GameStore-Web-Rest-Api\\GameStore\\GameStore.Api\\GameStore.Api.csproj",
+        "projectUniqueName": "D:\\ConsulencyPractise\\GameStore-Web-Rest-Api\\GameStore\\GameStore.api\\GameStore.Api.csproj",
         "projectName": "GameStore.Api",
-        "projectPath": "D:\\ConsulencyPractise\\GameStore-Web-Rest-Api\\GameStore\\GameStore.Api\\GameStore.Api.csproj",
+        "projectPath": "D:\\ConsulencyPractise\\GameStore-Web-Rest-Api\\GameStore\\GameStore.api\\GameStore.Api.csproj",
         "packagesPath": "C:\\Users\\waghm\\.nuget\\packages\\",
-        "outputPath": "D:\\ConsulencyPractise\\GameStore-Web-Rest-Api\\GameStore\\GameStore.Api\\obj\\",
+        "outputPath": "D:\\ConsulencyPractise\\GameStore-Web-Rest-Api\\GameStore\\GameStore.api\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -49,6 +49,12 @@
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
+          "dependencies": {
+            "FluentValidation.AspNetCore": {
+              "target": "Package",
+              "version": "[11.3.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

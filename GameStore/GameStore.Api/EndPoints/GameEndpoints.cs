@@ -1,5 +1,6 @@
 using System;
 using GameStore.Api.Dtos;
+using FluentValidation;
 
 namespace GameStore.Api.EndPoints;
 
@@ -32,12 +33,14 @@ public static class GameEndpoints
 
     public static void MapGameEndpoints(this WebApplication app)
     {
+        // Create a group for all game-related endpoints to keep them organized and easily identifiable in the API documentation.
+        var group = app.MapGroup("/games"); // 
 
         // GET /games
-        app.MapGet("/games", () => games);
+        group.MapGet("/", () => games);
 
         // GET /games/{id}
-        app.MapGet("/games/{id}", (int id) =>
+        group.MapGet("/{id}", (int id) =>
         {
             var game = games.Find(game => game.Id == id);
 
@@ -47,8 +50,15 @@ public static class GameEndpoints
 
 
         // POST /games
-        app.MapPost("/games", (CreateGameDto newGame) =>
+        group.MapPost("/", async (CreateGameDto newGame, IValidator<CreateGameDto> validator) =>
         {
+            var result = await validator.ValidateAsync(newGame);
+
+            if (!result.IsValid)
+            {
+                return Results.BadRequest(result.Errors);
+            }
+
             GameDto game = new(
                 games.Count + 1,
                 newGame.Name,
@@ -56,13 +66,22 @@ public static class GameEndpoints
                 newGame.Price,
                 newGame.ReleaseDate
             );
+
             games.Add(game);
+
             return Results.CreatedAtRoute(GetGameEndpointName, new { id = game.Id }, game);
         });
 
         // PUT /games/{id}
-        app.MapPut("/games/{id}", (int id, UpdateGameDto updateGame) =>
-        {
+        group.MapPut("/{id}", async (int id, UpdateGameDto updateGame,IValidator<UpdateGameDto> validator) =>
+        {   
+            var validationResult = await validator.ValidateAsync(updateGame);
+
+            if(!validationResult.IsValid)
+            {
+                return Results.BadRequest(validationResult.Errors);
+            }
+            
             var index = games.FindIndex(game => game.Id == id);
 
             if (index == -1)
@@ -83,7 +102,7 @@ public static class GameEndpoints
 
         // Delete /games/{id}
         // Unfortunately delete does not require a dto bcz it only requires the id and does not require any body content.
-        app.MapDelete("/games/{id}", (int id) =>
+        group.MapDelete("/{id}", (int id) =>
         {
             var index = games.FindIndex(game => game.Id == id);
             if (index == -1)
