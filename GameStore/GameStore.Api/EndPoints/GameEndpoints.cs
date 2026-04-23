@@ -12,28 +12,7 @@ namespace GameStore.Api.EndPoints;
 public static class GameEndpoints
 {
     const string GetGameEndpointName = "GetGame";
-    private static readonly List<GameSummaryDto> games = [
-    new (
-        1,
-        "Street Fighter II",
-        "Fighting",
-        19.99m,
-        new DateOnly(1991, 7, 15)),
-    new (
-        2,
-        "The Legend of Zelda: Ocarina of Time",
-        "Action-Adventure",
-        29.99m,
-        new DateOnly(1998, 11, 21)),
-    new (
-        3,
-        "Minecraft",
-        "Sandbox",
-        26.95m,
-        new DateOnly(2011, 11, 18))
-
-    ];
-
+    
     public static void MapGameEndpoints(this WebApplication app)
     {
         // Create a group for all game-related endpoints to keep them organized and easily identifiable in the API documentation.
@@ -149,7 +128,7 @@ public static class GameEndpoints
             await dbContext.Games
                 .Where(game => game.Id == id)
                 .ExecuteDeleteAsync();
-                
+
             return Results.NoContent();
         });
     }
