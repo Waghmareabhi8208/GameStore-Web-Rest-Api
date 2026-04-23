@@ -2,7 +2,7 @@ GET http://localhost:5022/games
 
 ###
 
-GET http://localhost:5022/games/2
+GET http://localhost:5022/games/3
 
 ###
 
@@ -10,7 +10,7 @@ POST http://localhost:5022/games
 Content-Type: application/json
 
 {
-    "name": "The Street Fighter 2",
+    "name": "The Test Game",
     "genreId": 1,
     "price": 60.55,
     "releaseDate": "2016-04-05"
@@ -29,4 +29,4 @@ Content-Type: application/json
 }   
 
 ###
-DELETE http://localhost:5022/games/5
+DELETE http://localhost:5022/games/3

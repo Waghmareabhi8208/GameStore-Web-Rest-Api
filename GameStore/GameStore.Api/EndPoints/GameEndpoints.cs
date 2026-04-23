@@ -141,17 +141,15 @@ public static class GameEndpoints
                     return Results.NoContent();
                 });
 
-                
+
         // Delete /games/{id}
         // Unfortunately delete does not require a dto bcz it only requires the id and does not require any body content.
-        group.MapDelete("/{id}", (int id) =>
+        group.MapDelete("/{id}",async (int id,GameStoreContext dbContext) =>
         {
-            var index = games.FindIndex(game => game.Id == id);
-            if (index == -1)
-            {
-                return Results.NotFound();
-            }
-            games.RemoveAt(index);
+            await dbContext.Games
+                .Where(game => game.Id == id)
+                .ExecuteDeleteAsync();
+                
             return Results.NoContent();
         });
     }
