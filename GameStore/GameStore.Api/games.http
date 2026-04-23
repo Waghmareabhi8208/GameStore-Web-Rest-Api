@@ -2,7 +2,7 @@ GET http://localhost:5022/games
 
 ###
 
-GET http://localhost:5022/games/5
+GET http://localhost:5022/games/2
 
 ###
 
@@ -10,22 +10,22 @@ POST http://localhost:5022/games
 Content-Type: application/json
 
 {
-    "name": "The Legend",
-    "genre": "Action-adventure",
-    "price": 58.55,
-    "releaseDate": "2017-03-03"
+    "name": "The Street Fighter 2",
+    "genreId": 1,
+    "price": 60.55,
+    "releaseDate": "2016-04-05"
 }
 
 
 ###
-PUT http://localhost:5022/games/5
+PUT http://localhost:5022/games/2
 Content-Type: application/json
 
 {
-    "name": "The Legend of Zelda: Breath of the Wild",
-    "genre": "Action-adventure",
-    "price": 490.99,
-    "releaseDate": "2017-03-03"
+   "name": "The Street Fighter 2 turbo",
+    "genreId": 1,
+    "price": 70.55,
+    "releaseDate": "2016-04-05"
 }   
 
 ###
